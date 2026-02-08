@@ -44,9 +44,9 @@ The dataset is downloaded programmatically using the **Kaggle API** to ensure re
 
 Accuracy is defined as:
 
-\[
-Accuracy = \frac{\text{Number of correct predictions}}{\text{Total number of predictions}}
-\]
+
+Accuracy = Number of correct predictions/Total number of predictions
+
 
 Additionally, **confusion matrices** will be used for qualitative analysis.
 
