@@ -41,14 +41,14 @@ The dataset is downloaded programmatically using the **Kaggle API** to ensure re
 
 <table>
 	<tr>
-		<td align="center"><b>Cardboard</b><br><img src="data/Garbage-classification/Garbage-classification/cardboard/cardboard1.jpg" width="180"></td>
-		<td align="center"><b>Glass</b><br><img src="data/Garbage-classification/Garbage-classification/glass/glass1.jpg" width="180"></td>
-		<td align="center"><b>Metal</b><br><img src="data/Garbage-classification/Garbage-classification/metal/metal1.jpg" width="180"></td>
+		<td align="center"><b>Cardboard</b><br><img src="reports/figures/readme_samples/cardboard.jpg" width="180"></td>
+		<td align="center"><b>Glass</b><br><img src="reports/figures/readme_samples/glass.jpg" width="180"></td>
+		<td align="center"><b>Metal</b><br><img src="reports/figures/readme_samples/metal.jpg" width="180"></td>
 	</tr>
 	<tr>
-		<td align="center"><b>Paper</b><br><img src="data/Garbage-classification/Garbage-classification/paper/paper1.jpg" width="180"></td>
-		<td align="center"><b>Plastic</b><br><img src="data/Garbage-classification/Garbage-classification/plastic/plastic1.jpg" width="180"></td>
-		<td align="center"><b>Trash</b><br><img src="data/Garbage-classification/Garbage-classification/trash/trash1.jpg" width="180"></td>
+		<td align="center"><b>Paper</b><br><img src="reports/figures/readme_samples/paper.jpg" width="180"></td>
+		<td align="center"><b>Plastic</b><br><img src="reports/figures/readme_samples/plastic.jpg" width="180"></td>
+		<td align="center"><b>Trash</b><br><img src="reports/figures/readme_samples/trash.jpg" width="180"></td>
 	</tr>
 </table>
 
