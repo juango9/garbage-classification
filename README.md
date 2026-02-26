@@ -37,6 +37,21 @@ https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification
 
 The dataset is downloaded programmatically using the **Kaggle API** to ensure reproducibility.
 
+### Sample images by class
+
+<table>
+	<tr>
+		<td align="center"><b>Cardboard</b><br><img src="data/Garbage-classification/Garbage-classification/cardboard/cardboard1.jpg" width="180"></td>
+		<td align="center"><b>Glass</b><br><img src="data/Garbage-classification/Garbage-classification/glass/glass1.jpg" width="180"></td>
+		<td align="center"><b>Metal</b><br><img src="data/Garbage-classification/Garbage-classification/metal/metal1.jpg" width="180"></td>
+	</tr>
+	<tr>
+		<td align="center"><b>Paper</b><br><img src="data/Garbage-classification/Garbage-classification/paper/paper1.jpg" width="180"></td>
+		<td align="center"><b>Plastic</b><br><img src="data/Garbage-classification/Garbage-classification/plastic/plastic1.jpg" width="180"></td>
+		<td align="center"><b>Trash</b><br><img src="data/Garbage-classification/Garbage-classification/trash/trash1.jpg" width="180"></td>
+	</tr>
+</table>
+
 ---
 ## 4. Evaluation Metric
 
@@ -54,9 +69,9 @@ Additionally, **confusion matrices** will be used for qualitative analysis.
 
 The dataset is split into three subsets using a stratified procedure to preserve class proportions:
 
-- **Training set**: 70%  
-- **Validation set**: 20%  
-- **Test set**: 15%  
+- **Training set**: 80%  
+- **Validation set**: 10%  
+- **Test set**: 10%  
 
 The split is performed using `train_test_split` from `scikit-learn` with a fixed random seed to ensure reproducibility.
 
@@ -79,3 +94,11 @@ https://mmcv.csie.ncku.edu.tw/~wtchu/papers/2020ICAN-meng.pdf
 | DenseNet121 | Transfer Learning | Yes | Accuracy | ~95% |
 | MobileNetV2 | Transfer Learning | Yes | Accuracy | ~92–95% |
 | SSL + Transformer | Self-supervised + DL | Yes | Accuracy | ~97% |
+
+### Results in this project (by split)
+
+| Model | Train Accuracy | Validation Accuracy | Test Accuracy |
+|------|----------------|---------------------|---------------|
+| Logistic Regression (Linear Model) | 1.00 | 0.44 | 0.38 |
+| Random Forest (GridSearchCV) | 0.9975 | 0.6917 | 0.6640 |
+| Simple CNN | 0.37 | 0.38 | 0.38 |
