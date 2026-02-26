@@ -57,11 +57,31 @@ The dataset is downloaded programmatically using the **Kaggle API** to ensure re
 
 ### Primary metric: **Accuracy**
 
-Accuracy is defined as:
+For each class, we use the one-vs-rest scheme and define:
 
+- **TP (True Positives)**: correctly predicted samples of that class
+- **FP (False Positives)**: samples predicted as that class but belonging to another class
+- **FN (False Negatives)**: samples of that class predicted as another class
 
-Accuracy = Number of correct predictions/Total number of predictions
+Then we report the following metrics:
 
+- **Accuracy**
+	- **How it is computed**: $\text{Accuracy} = \frac{\text{Number of correct predictions}}{\text{Total number of predictions}}$
+	- **Why we use it**: gives a global view of overall performance across all classes.
+
+- **Precision**
+	- **How it is computed**: $\text{Precision} = \frac{TP}{TP + FP}$
+	- **Why we use it**: tells us how reliable positive predictions are for each class (important when confusing one material with another).
+
+- **Recall**
+	- **How it is computed**: $\text{Recall} = \frac{TP}{TP + FN}$
+	- **Why we use it**: measures how many real samples of a class are correctly detected.
+
+- **F1-score**
+	- **How it is computed**: $F1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}$
+	- **Why we use it**: balances Precision and Recall in a single value, useful when class frequencies are not perfectly balanced.
+
+We report these metrics per class and also as **macro** and **weighted** averages using `classification_report`.
 
 Additionally, **confusion matrices** will be used for qualitative analysis.
 
