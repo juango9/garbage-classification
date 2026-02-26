@@ -21,6 +21,15 @@ def estructura_modelo(input_shape=(128, 128, 3), num_classes=6):
     model.add(GlobalAveragePooling2D())
     
     model.add(Dense(num_classes, activation='softmax'))
+
+    resumen = model.summary()
+    
+    return model,resumen
+
+def compilar(model,learning_rate):
+
+    optimizer = Adam(learning_rate=learning_rate)
+    model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['categorical_accuracy'])
     
     return model
 
