@@ -34,7 +34,7 @@ def estructura_modelo(input_shape=(128, 128, 3), num_classes=6):
 def compilar(model,learning_rate):
 
     optimizer = Adam(learning_rate=learning_rate)
-    model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['categorical_accuracy'])
+    model.compile(optimizer=optimizer, loss='sparse_categorical_crossentropy', metrics=['sparse_categorical_accuracy'])
     
     return model
 
