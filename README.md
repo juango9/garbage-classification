@@ -121,4 +121,4 @@ https://mmcv.csie.ncku.edu.tw/~wtchu/papers/2020ICAN-meng.pdf
 |------|----------------|---------------------|---------------|
 | Logistic Regression (Linear Model) | 1.00 | 0.44 | 0.38 |
 | Random Forest (GridSearchCV) | 0.9975 | 0.6917 | 0.6640 |
-| Simple CNN | 0.37 | 0.38 | 0.38 |
+| The most basic CNN | 0.37 | 0.38 | 0.38 |
