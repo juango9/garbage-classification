@@ -14,20 +14,6 @@ The project is developed as part of a Deep Learning course and follows a structu
 ```text
 garbage-classification/
 ├── README.md
-├── data/
-│   ├── one-indexed-files-notrash_train.txt
-│   ├── one-indexed-files-notrash_val.txt
-│   ├── one-indexed-files-notrash_test.txt
-│   ├── one-indexed-files.txt
-│   ├── zero-indexed-files.txt
-│   └── Garbage-classification/
-│       └── Garbage-classification/
-│           ├── cardboard/
-│           ├── glass/
-│           ├── metal/
-│           ├── paper/
-│           ├── plastic/
-│           └── trash/
 ├── notebooks/
 │   ├── EDA.ipynb
 │   └── Modelos.ipynb
@@ -41,10 +27,12 @@ garbage-classification/
 │           ├── paper.jpg
 │           ├── plastic.jpg
 │           └── trash.jpg
-└── src/
-	├── carga.py
-	├── curvas.py
-	└── modelo_simple.py
+│── src/
+│	├── carga.py
+│	├── curvas.py
+│	└── modelo_simple.py
+│
+
 ```
 
 ---
