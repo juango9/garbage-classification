@@ -9,7 +9,47 @@ The project is developed as part of a Deep Learning course and follows a structu
 
 ---
 
-## 2. Problem Definition
+## 2. Project Structure
+
+```text
+garbage-classification/
+├── README.md
+├── data/
+│   ├── one-indexed-files-notrash_train.txt
+│   ├── one-indexed-files-notrash_val.txt
+│   ├── one-indexed-files-notrash_test.txt
+│   ├── one-indexed-files.txt
+│   ├── zero-indexed-files.txt
+│   └── Garbage-classification/
+│       └── Garbage-classification/
+│           ├── cardboard/
+│           ├── glass/
+│           ├── metal/
+│           ├── paper/
+│           ├── plastic/
+│           └── trash/
+├── notebooks/
+│   ├── EDA.ipynb
+│   └── Modelos.ipynb
+├── reports/
+│   ├── Modelos.html
+│   └── figures/
+│       └── readme_samples/
+│           ├── cardboard.jpg
+│           ├── glass.jpg
+│           ├── metal.jpg
+│           ├── paper.jpg
+│           ├── plastic.jpg
+│           └── trash.jpg
+└── src/
+	├── carga.py
+	├── curvas.py
+	└── modelo_simple.py
+```
+
+---
+
+## 3. Problem Definition
 
 - **Task**: Supervised image classification  
 - **Input (X)**: RGB images of garbage items  
@@ -24,7 +64,7 @@ The project is developed as part of a Deep Learning course and follows a structu
 - Trash  
 
 ---
-## 3. Dataset
+## 4. Dataset
 
 The dataset used is the **Garbage Classification dataset** available on Kaggle:
 
@@ -53,7 +93,7 @@ The dataset is downloaded programmatically using the **Kaggle API** to ensure re
 </table>
 
 ---
-## 4. Evaluation Metric
+## 5. Evaluation Metric
 
 ### Primary metric: **Accuracy**
 
@@ -85,7 +125,7 @@ We report these metrics per class and also as **macro** and **weighted** average
 
 Additionally, **confusion matrices** will be used for qualitative analysis.
 
-## 5. Dataset Split
+## 6. Dataset Split
 
 The dataset is split into three subsets using a stratified procedure to preserve class proportions:
 
@@ -97,7 +137,7 @@ The split is performed using `train_test_split` from `scikit-learn` with a fixed
 
 ---
 
-## 6. State of the Art
+## 7. State of the Art
 
 Previous approaches for garbage image classification include both classical computer vision methods and deep learning techniques.
 
