@@ -1,18 +1,4 @@
-"""
-Modelo de red neuronal convolucional con 4 bloques para la clasificacion de basura.
 
-Arquitectura:
-  - Bloque 1: 2x Conv2D(32)  + BatchNorm + MaxPooling + Dropout(0.25)  -> 64x64x32
-  - Bloque 2: 2x Conv2D(64)  + BatchNorm + MaxPooling + Dropout(0.25)  -> 32x32x64
-  - Bloque 3: 2x Conv2D(128) + BatchNorm + MaxPooling + Dropout(0.25)  -> 16x16x128
-  - Bloque 4: 2x Conv2D(256) + BatchNorm + GlobalAveragePooling2D      -> 256
-  - Dense(256, relu) + BatchNorm + Dropout(0.5)
-  - Dense(num_classes, softmax)
-
-El aumento progresivo de filtros permite capturar caracteristicas de baja y alta
-frecuencia. BatchNormalization acelera la convergencia y Dropout evita el sobreajuste
-al incrementar la capacidad del modelo respecto al Modelo 1.
-"""
 
 from keras.models import Sequential
 from keras.layers import Dense, Conv2D, BatchNormalization, Dropout,Activation, MaxPooling2D, GlobalAveragePooling2D
