@@ -145,8 +145,18 @@ https://mmcv.csie.ncku.edu.tw/~wtchu/papers/2020ICAN-meng.pdf
 
 ### Results in this project (by split)
 
-| Model | Train Accuracy | Validation Accuracy | Test Accuracy |
-|------|----------------|---------------------|---------------|
-| Logistic Regression (Linear Model) | 1.00 | 0.44 | 0.38 |
-| Random Forest (GridSearchCV) | 0.9975 | 0.6917 | 0.6640 |
-| The most basic CNN | 0.37 | 0.38 | 0.38 |
+| Model | Parameters | Train Accuracy | Validation Accuracy | Test Accuracy | 
+|------|------------|----------------|---------------------|---------------|
+| Logistic Regression (Linear Model) | 294,918 | 1.0000 | 0.4000 | 0.4500 |
+| Random Forest (GridSearchCV) | 65,056* | 0.9980 | 0.6324 | 0.6640 |
+| The most basic CNN | 210 | 0.3700 | 0.3800 | 0.3800 |
+| CNN Model 1 | 1,094 | 0.6165 | 0.6087 | 0.6443 |
+| CNN Model 2 | 94,022 | 0.9193 | 0.8735 | 0.8300 |
+| CNN Model 3 | 389,958 | 0.9980 | 0.8854 | 0.8538 |
+| CNN Model 4 | 409,286 | 0.7996 | 0.7075 | 0.7708 |
+| CNN Model 5 | 474,822 | 0.8976 | 0.8458 | 0.8103 |
+| CNN Model 6 (ResNet50) | 24,147,078 | 0.9990 | 0.8933 | 0.8735 |
+
+The values above were taken from the outputs already stored in each notebook. 
+
+* For Random Forest, the parameter count corresponds to the total number of tree nodes in the trained forest.
