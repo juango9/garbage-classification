@@ -157,6 +157,4 @@ https://mmcv.csie.ncku.edu.tw/~wtchu/papers/2020ICAN-meng.pdf
 | CNN Model 5 | 474,822 | 0.8976 | 0.8458 | 0.8103 |
 | CNN Model 6 (ResNet50) | 24,147,078 | 0.9990 | 0.8933 | 0.8735 |
 
-The values above were taken from the outputs already stored in each notebook. 
 
-* For Random Forest, the parameter count corresponds to the total number of tree nodes in the trained forest.
