@@ -14,26 +14,20 @@ def estructura_modelo(input_shape=(128, 128, 3), num_classes=6):
         input_shape=input_shape
     )
 
-    base_model.trainable = True
+    base_model.trainable = False
 
     model = Sequential()
 
     model.add(base_model)
     model.add(GlobalAveragePooling2D())
     model.add(Dense(256, use_bias=False))
-    #model.add(BatchNormalization())
+    model.add(BatchNormalization())
     model.add(Activation('relu'))
     model.add(Dropout(0.4))
     model.add(Dense(128, use_bias=False))
-    #model.add(BatchNormalization())
+    model.add(BatchNormalization())
     model.add(Activation('relu'))
     model.add(Dropout(0.4))
-    model.add(Dense(128, use_bias=False))
-    #model.add(BatchNormalization())
-    model.add(Activation('relu'))
-    model.add(Dropout(0.4))
-    
-    
     model.add(Dense(num_classes, activation='softmax'))
 
     model.summary()

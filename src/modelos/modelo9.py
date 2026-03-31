@@ -1,14 +1,14 @@
 
 
 from keras.models import Sequential
-from keras.layers import Dense, Conv2D, BatchNormalization, Dropout,Activation, MaxPooling2D, GlobalAveragePooling2D
+from keras.layers import Input, Dense, Conv2D, BatchNormalization, Dropout, Activation, MaxPooling2D, GlobalAveragePooling2D, RandomFlip, RandomRotation, RandomZoom, RandomContrast, RandomBrightness
 from keras.optimizers import Adam
-from keras.applications import ResNet50
+from keras.applications import DenseNet121
 
 
-def estructura_modelo(input_shape=(128, 128, 3), num_classes=6):
+def estructura_modelo(input_shape=(128, 128, 3), num_classes=6, use_augmentation=False):
     
-    base_model = ResNet50(
+    base_model = DenseNet121(
         weights='imagenet',
         include_top=False,
         input_shape=input_shape
@@ -17,6 +17,14 @@ def estructura_modelo(input_shape=(128, 128, 3), num_classes=6):
     base_model.trainable = True
 
     model = Sequential()
+    model.add(Input(shape=input_shape))
+
+    if use_augmentation:
+        model.add(RandomFlip("horizontal"))
+        model.add(RandomRotation(0.15))
+        model.add(RandomZoom(0.1))
+        model.add(RandomContrast(0.1))
+        model.add(RandomBrightness(0.1))
 
     model.add(base_model)
     model.add(GlobalAveragePooling2D())
@@ -36,6 +44,7 @@ def estructura_modelo(input_shape=(128, 128, 3), num_classes=6):
     
     model.add(Dense(num_classes, activation='softmax'))
 
+    model.build((None, *input_shape))
     model.summary()
 
     return model

@@ -156,5 +156,28 @@ https://mmcv.csie.ncku.edu.tw/~wtchu/papers/2020ICAN-meng.pdf
 | CNN Model 4 | 409,286 | 0.7996 | 0.7075 | 0.7708 |
 | CNN Model 5 | 474,822 | 0.8976 | 0.8458 | 0.8103 |
 | CNN Model 6 (ResNet50) | 24,147,078 | 0.9990 | 0.8933 | 0.8735 |
+| CNN Model 7 (ResNet50, frozen base) | 24,147,078 | 0.9985 | 0.8854 | 0.8656 |
+| CNN Model 8 (EfficientNetB0) | 4,427,177 | 0.9990 | 0.9209 | 0.8972 |
+| CNN Model 9 (DenseNet121) | 7,349,574 | 0.9960 | 0.9289 | 0.9051 |
+
+### CNN Model 8 (EfficientNetB0): Evaluation with different seeds
+
+| Seed   |   Train Accuracy |   Val Accuracy |   Test Accuracy |
+|:-------|-----------------:|---------------:|----------------:|
+| 42     |           0.9990 |         0.9249 |          0.9012 |
+| 123    |           0.9980 |         0.9012 |          0.8617 |
+| 7      |           0.9985 |         0.9249 |          0.8775 |
+| 99     |           0.9985 |         0.8893 |          0.8656 |
+| Media  |           0.9985 |         0.9101 |          0.8765 |
+
+### CNN Model 9 (DenseNet121): Evaluation with different seeds
+
+| Seed   |   Train Accuracy |   Val Accuracy |   Test Accuracy |
+|:-------|-----------------:|---------------:|----------------:|
+| 42     |            0.999 |         0.8972 |          0.9012 |
+| 123    |            0.999 |         0.8893 |          0.8854 |
+| 7      |            0.999 |         0.8893 |          0.8696 |
+| 99     |            0.999 |         0.8933 |          0.8972 |
+| Media  |            0.999 |         0.8923 |          0.8883 |
 
 
