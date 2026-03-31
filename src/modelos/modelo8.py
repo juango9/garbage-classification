@@ -44,7 +44,7 @@ def estructura_modelo(input_shape=(128, 128, 3), num_classes=6, use_augmentation
     
     model.add(Dense(num_classes, activation='softmax'))
 
-    model.build((None, *input_shape))
+    
     model.summary()
 
     return model
